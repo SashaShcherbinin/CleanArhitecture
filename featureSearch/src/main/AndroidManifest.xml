@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.movies.popular.presentation.search" >
+    <application>
+        <activity
+            android:name="com.movies.popular.presentation.feature.search.SearchActivity"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+    </application>
+
+</manifest>

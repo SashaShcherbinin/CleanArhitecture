@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.movies.popular.app">
+
+    <application
+        android:name=".InjectorApplication"
+        tools:replace="android:theme"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,MissingApplicationIcon" />
+</manifest>

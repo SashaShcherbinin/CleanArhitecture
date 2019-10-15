@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">PopularMovies</string>
+    <string name="main_tab_list">Movies</string>
+    <string name="main_tab_favorite">Favorite</string>
+    <string name="general_label_favorite">Favorite</string>
+    <string name="general_label_main">Main</string>
+    <string name="general_label_movies">Movies</string>
+    <string name="general_label_loading">Loading</string>
+    <string name="general_label_error">Error</string>
+    <string name="general_label_movie_detail">Movie Details</string>
+    <string name="general_label_search">Search</string>
+    <string name="general_hint_search">Search</string>
+
+    <string name="filter_sort_type_popularity_asc">Popularity ASC</string>
+    <string name="filter_sort_type_popularity_desc">Popularity DESC</string>
+    <string name="filter_sort_type_release_date_asc">Release date ASC</string>
+    <string name="filter_sort_type_release_date_desc">Release date DESC</string>
+    <string name="filter_sort_type_revenue_asc">Revenue ASC</string>
+    <string name="filter_sort_type_revenue_desc">Revenue DESC</string>
+    <string name="filter_sort_type_primary_release_date_asc">Primary release date ASC</string>
+    <string name="filter_sort_type_primary_release_date_desc">Primary release date DESC</string>
+    <string name="filter_sort_type_original_title_asc">Original title ASC</string>
+    <string name="filter_sort_type_original_title_desc">Original title DESC</string>
+    <string name="filter_sort_type_vote_average_asc">Vote average ASC</string>
+    <string name="filter_sort_type_vote_average_desc">Vote average DESC</string>
+    <string name="filter_sort_type_vote_count_asc">Vote count ASC</string>
+    <string name="filter_sort_type_vote_count_desc">Vote count DESC</string>
+</resources>

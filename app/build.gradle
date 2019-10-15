@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion versions.conf.compileSdkVersion
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        minSdkVersion versions.conf.minSdkVersion
+        targetSdkVersion versions.conf.targetSdkVersion
+        versionCode versions.conf.versionCode
+        versionName versions.conf.versionName
+        multiDexEnabled true
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+    }
+    dataBinding { enabled = true }
+    kapt {
+        correctErrorTypes = true
+        generateStubs = true
+        javacOptions { option("-Xmaxerrs", 1000) }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation project(":domain")
+    implementation project(":data")
+    implementation project(":presentation")
+    implementation project(':featureBase')
+    implementation project(':featureSearch')
+    implementation project(':featureMovie')
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.multidex:multidex:$versions.androidx.multidex"
+    implementation "androidx.fragment:fragment:$versions.androidx.fragment"
+}

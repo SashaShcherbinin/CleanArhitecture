@@ -1,0 +1,64 @@
+{
+  "adult": false,
+  "backdrop_path": "/273sZucrvytkuYjsYYSa7RtQa2B.jpg",
+  "budget": 12000000,
+  "genres": [
+    {
+      "id": 14,
+      "name": "Fantasy"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 878,
+      "name": "Science Fiction"
+    }
+  ],
+  "homepage": "http://www.tidelandthemovie.com/",
+  "id": 11559,
+  "imdb_id": "tt0410764",
+  "original_language": "en",
+  "original_title": "Tideland",
+  "overview": "Because of the actions of her irresponsible parents, a young girl is left alone on a decrepit country estate and survives inside her fantastic imagination.",
+  "popularity": 6.007,
+  "poster_path": "/xR8vo6xGJbk8QljOlcjLNyLrwB5.jpg",
+  "production_companies": [
+    {
+      "id": 11561,
+      "logo_path": "/8HB3TFUeo83keAPHfFfrNtN2MmA.png",
+      "name": "Recorded Picture Company (RPC)",
+      "origin_country": "GB"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "CA",
+      "name": "Canada"
+    },
+    {
+      "iso_3166_1": "GB",
+      "name": "United Kingdom"
+    }
+  ],
+  "release_date": "2005-09-09",
+  "revenue": 566611,
+  "runtime": 120,
+  "spoken_languages": [
+    {
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Released",
+  "tagline": "The squirrels made it seem less lonely.",
+  "title": "Tideland",
+  "video": false,
+  "vote_average": 6.4,
+  "vote_count": 239
+}

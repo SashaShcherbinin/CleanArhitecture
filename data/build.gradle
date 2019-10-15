@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion versions.conf.compileSdkVersion
+    defaultConfig {
+        minSdkVersion versions.conf.minSdkVersion
+        targetSdkVersion versions.conf.targetSdkVersion
+        versionCode versions.conf.versionCode
+        versionName versions.conf.versionName
+    }
+    buildTypes {
+        release {
+            buildConfigField 'String', 'SCHEME', "\"https://\""
+            buildConfigField 'String', 'HOST', "\"api.themoviedb.org\""
+        }
+        debug {
+            buildConfigField 'String', 'SCHEME', "\"https://\""
+            buildConfigField 'String', 'HOST', "\"api.themoviedb.org\""
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+    kapt {
+        correctErrorTypes = true
+        generateStubs = true
+        javacOptions { option("-Xmaxerrs", 1000) }
+    }
+}
+
+dependencies {
+    implementation project(":domain")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    /* Network */
+    implementation "com.squareup.retrofit2:retrofit:$versions.network.retrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$versions.network.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$versions.network.retrofit"
+    implementation "com.squareup.okhttp3:logging-interceptor:$versions.network.logging_interceptor"
+    implementation "com.squareup.okhttp3:okhttp:$versions.network.okhttp"
+    implementation "com.google.code.gson:gson:$versions.network.gson"
+    /* Dagger */
+    kapt "com.google.dagger:dagger-compiler:$versions.dagger"
+    implementation "com.google.dagger:dagger:$versions.dagger"
+    kaptTest "com.google.dagger:dagger-compiler:$versions.dagger"
+    /* Test */
+    testImplementation "junit:junit:$versions.tests.junit"
+    testImplementation "org.mockito:mockito-inline:$versions.tests.mockito"
+    testImplementation "com.nhaarman:mockito-kotlin:$versions.tests.mockitoKotlin"
+}

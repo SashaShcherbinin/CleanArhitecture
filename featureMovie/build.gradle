@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion versions.conf.compileSdkVersion
+    defaultConfig {
+        minSdkVersion versions.conf.minSdkVersion
+        targetSdkVersion versions.conf.targetSdkVersion
+        versionCode versions.conf.versionCode
+        versionName versions.conf.versionName
+    }
+    buildTypes {
+        release {}
+        debug {}
+    }
+    dataBinding { enabled = true }
+    kapt {
+        correctErrorTypes = true
+        generateStubs = true
+        javacOptions { option("-Xmaxerrs", 1000) }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation project(':domain')
+    implementation project(':presentation')
+    /* base */
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.multidex:multidex:$versions.androidx.multidex"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.androidx.constraintlayout"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$versions.androidx.swiperefreshlayout"
+    implementation "androidx.fragment:fragment:$versions.androidx.fragment"
+    implementation "androidx.recyclerview:recyclerview:$versions.androidx.recyclerview"
+    implementation "androidx.lifecycle:lifecycle-extensions:$versions.androidx.lifecycle"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$versions.androidx.lifecycle"
+    implementation "com.google.android.material:material:$versions.material"
+    /* Dagger */
+    kapt "com.google.dagger:dagger-compiler:$versions.dagger"
+    implementation "com.google.dagger:dagger:$versions.dagger"
+    kaptTest "com.google.dagger:dagger-compiler:$versions.dagger"
+    /* Test */
+    testImplementation "junit:junit:$versions.tests.junit"
+    testImplementation "org.mockito:mockito-inline:$versions.tests.mockito"
+    testImplementation "com.nhaarman:mockito-kotlin:$versions.tests.mockitoKotlin"
+}
