@@ -34,6 +34,7 @@ android {
         sourceCompatibility 1.8
         targetCompatibility 1.8
     }
+    dynamicFeatures = [':featureMovie']
 }
 
 dependencies {
@@ -42,7 +43,6 @@ dependencies {
     implementation project(":presentation")
     implementation project(':featureBase')
     implementation project(':featureSearch')
-    implementation project(':featureMovie')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.multidex:multidex:$versions.androidx.multidex"

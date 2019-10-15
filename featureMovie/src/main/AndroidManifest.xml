@@ -1,5 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.movies.popular.feature.movie">
+
+    <dist:module dist:title="@string/module_feature_movie">
+        <dist:delivery>
+            <dist:on-demand />
+        </dist:delivery>
+        <dist:fusing dist:include="true" />
+    </dist:module>
 
     <application>
         <activity android:name=".MovieDetailActivity" />
